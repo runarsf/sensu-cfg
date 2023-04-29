@@ -2,4 +2,4 @@
 type: Namespace
 api_version: core/v2
 spec:
-  name: test-namespace
+  name: default

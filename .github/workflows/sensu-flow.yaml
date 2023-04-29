@@ -15,22 +15,14 @@ jobs:
 
     - name: Sensuflow with required settings
       uses: sensu/sensu-flow@0.7.0
+      # https://github.com/sensu/sensu-flow#configuration
       with:
-        ##
-        # Required configuration
-        # Please make use of GitHub secrets for sensitive information 
-        ##
         sensu_api_url: ${{ secrets.SENSU_API_URL }}
         sensu_api_key: ${{ secrets.SENSU_API_KEY }}
-        ##
-        # Optional configuration, if not present defaults will be used
-        ##
+
         namespaces_dir: .sensu/namespaces
         namespaces_file: .sensu/cluster/namespaces.yaml
         matching_label: "sensu.io/workflow"
         matching_condition: "== 'sensu-flow'"
-        ##
-        # Only prune resources created_by these users, you'll want to make sure
-        # this list includes the user associated with the api-key used for authorization
-        ##
+
         resource_authors: "sensu-flow"
