@@ -1,0 +1,15 @@
+---
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: public-ip
+  labels:
+    sensu.io/workflow: sensu-flow
+spec:
+  command: echo hi
+  handlers:
+  - test
+  interval: 10
+  publish: true
+  subscriptions:
+  - system
