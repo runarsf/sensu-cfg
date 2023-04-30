@@ -1,9 +1,0 @@
-type: Handler
-api_version: core/v2
-metadata:
-  name: test
-  labels:
-    sensu.io/workflow: sensu-flow
-spec:
-  command: sleep 10
-  type: pipe

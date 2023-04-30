@@ -5,7 +5,7 @@ metadata:
   labels:
     sensu.io/workflow: sensu-flow
 spec:
-  command: sensu-telegram-handler --api-token "${TELEGRAM_API_TOKEN}" --chatid "${TELEGRAM_CHAT_ID}"
+  command: sensu-telegram-handler --api-token $TELEGRAM_API_TOKEN --chatid $TELEGRAM_CHAT_ID
   type: pipe
   filters:
   - is_incident
