@@ -11,7 +11,7 @@ spec:
   env_vars:
   - OLD_IP=88.89.158.149
   handlers:
-  - telegram-handler
+  - telegram
   interval: 900
   publish: true
   subscriptions:
