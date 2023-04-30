@@ -5,9 +5,24 @@ metadata:
   labels:
     sensu.io/workflow: sensu-flow
 spec:
-  command: >-
-    test "${NEW_IP:=$(wget -q -O - ipinfo.io/ip)}" = "${OLD_IP}" || (printf
-    '%s\n' "IP has changed, new IP: ${NEW_IP}"; exit 1)
+  command: |-
+    if test "${NEW_IP:=$(wget -q -O - ipinfo.io/ip)}" != "${OLD_IP}"; then
+      printf '%s\n' "IP has changed, new IP: ${NEW_IP}"
+
+      # curl -X PATCH \
+      #   -H "Authorization: Key 87dee393-6bc6-4fef-b959-3abcc6d22b5f" \
+      #   -H 'Content-Type: application/merge-patch+json' \
+      #   -d '{
+      #     "env_vars": [
+      #       "OLD_IP=88.89.158.149"
+      #     ]
+      #   }' \
+      #   https://sensu.runarsf.dev/api/api/core/v2/namespaces/default/checks/public-ip
+
+      exit 1
+    else
+      printf '%s\n' "Public IP (${NEW_IP}) matches old IP"
+    fi
   env_vars:
   - OLD_IP=88.89.158.149
   handlers:
