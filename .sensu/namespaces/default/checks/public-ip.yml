@@ -1,4 +1,3 @@
----
 type: CheckConfig
 api_version: core/v2
 metadata:
@@ -8,7 +7,7 @@ metadata:
 spec:
   command: http-check --url https://cloud.runarsf.dev
   handlers:
-  - test
+  - telegram-handler
   interval: 10
   publish: true
   subscriptions:

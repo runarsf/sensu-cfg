@@ -1,0 +1,17 @@
+type: Handler
+api_version: core/v2
+metadata:
+  name: telegram-handler
+  labels:
+    sensu.io/workflow: sensu-flow
+spec:
+  command: sensu-telegram-handler --api-token "${TELEGRAM_API_TOKEN}" --chatid "${TELEGRAM_CHAT_ID}"
+  type: pipe
+  filters:
+  - is_incident
+  - not_silenced
+  secrets:
+  - name: TELEGRAM_API_TOKEN
+    secret: telegram-api-token
+  - name: TELEGRAM_CHAT_ID
+    secret: telegram-chat-id
