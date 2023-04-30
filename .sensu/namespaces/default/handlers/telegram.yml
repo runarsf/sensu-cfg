@@ -10,6 +10,8 @@ spec:
   filters:
   - is_incident
   - not_silenced
+  runtime_assets:
+  - sensu-telegram-handler
   secrets:
   - name: TELEGRAM_API_TOKEN
     secret: telegram-api-token
