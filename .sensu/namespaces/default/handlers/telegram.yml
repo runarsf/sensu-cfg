@@ -1,7 +1,7 @@
 type: Handler
 api_version: core/v2
 metadata:
-  name: telegram-handler
+  name: telegram
   labels:
     sensu.io/workflow: sensu-flow
 spec:

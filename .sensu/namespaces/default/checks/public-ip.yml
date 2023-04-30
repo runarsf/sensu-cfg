@@ -5,12 +5,14 @@ metadata:
   labels:
     sensu.io/workflow: sensu-flow
 spec:
-  command: http-check --url https://cloud.runarsf.dev
+  command: >-
+    test "${NEW_IP:=$(wget -q -O - ipinfo.io/ip)}" = "${OLD_IP}"
+      || (printf '%s\n' "IP has changed, new IP: ${NEW_IP}"; exit 1)
+  env_vars:
+  - OLD_IP=88.89.158.149
   handlers:
   - telegram-handler
   interval: 900
   publish: true
   subscriptions:
   - system
-  runtime_assets:
-  - http-checks

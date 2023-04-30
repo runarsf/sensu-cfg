@@ -9,7 +9,6 @@ metadata:
     io.sensu.bonsai.tier: Community
     io.sensu.bonsai.url: https://bonsai.sensu.io/assets/Thor77/sensu-telegram-handler
     io.sensu.bonsai.version: 0.2.0
-  created_by: runar
   name: sensu-telegram-handler
   namespace: default
 spec:

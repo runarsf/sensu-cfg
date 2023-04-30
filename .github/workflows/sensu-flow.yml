@@ -1,4 +1,4 @@
-name: SensuFlow CI Example
+name: SensuFlow CI
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Sensuflow with required settings
+    - name: SensuFlow
       uses: sensu/sensu-flow@0.7.0
       # https://github.com/sensu/sensu-flow#configuration
       with:
