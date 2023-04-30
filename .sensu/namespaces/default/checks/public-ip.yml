@@ -6,10 +6,12 @@ metadata:
   labels:
     sensu.io/workflow: sensu-flow
 spec:
-  command: echo hi
+  command: http-check --url https://cloud.runarsf.dev
   handlers:
   - test
   interval: 10
   publish: true
   subscriptions:
   - system
+  runtime_assets:
+  - http-checks
