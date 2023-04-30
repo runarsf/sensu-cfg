@@ -8,7 +8,7 @@ spec:
   command: http-check --url https://cloud.runarsf.dev
   handlers:
   - telegram-handler
-  interval: 10
+  interval: 900
   publish: true
   subscriptions:
   - system
