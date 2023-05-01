@@ -8,6 +8,8 @@ spec:
   command: |-
     #!/usr/bin/env python
     print("Hello World!")
+  runtime_assets:
+  - sensu-python-runtime
   env_vars:
   - OLD_IP=88.89.158.149
   handlers:
