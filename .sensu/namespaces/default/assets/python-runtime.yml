@@ -3,7 +3,7 @@ type: Asset
 api_version: core/v2
 metadata:
   name: python-runtime
-  labels: 
+  labels:
   annotations:
     io.sensu.bonsai.url: https://bonsai.sensu.io/assets/jspaleta/sensu-python-runtime
     io.sensu.bonsai.api_url: https://bonsai.sensu.io/api/v1/assets/jspaleta/sensu-python-runtime
