@@ -2,9 +2,12 @@
 name: SensuFlow
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
+    paths:
+      - .sensu/**
   pull_request:
     branches:
       - main
