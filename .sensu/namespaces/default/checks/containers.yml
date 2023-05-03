@@ -14,8 +14,8 @@ spec:
     EOF
 
     while IFS= read -r container || test -n "${container}" ; do
-      check-container.rb -N "${container}"
-    done < <(printf '%s' "$CONTAINERS")
+      check-container.rb -N ${container}
+    done < <(printf '%s' "${CONTAINERS}")
   handlers:
     - telegram
   interval: 900
