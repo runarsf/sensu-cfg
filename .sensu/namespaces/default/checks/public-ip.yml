@@ -9,6 +9,7 @@ spec:
   command: cloudflare-public-ip.py '*.runarsf.dev'
   runtime_assets:
   - cloudflare-checks
+  - python-runtime
   handlers:
   - telegram
   interval: 900
