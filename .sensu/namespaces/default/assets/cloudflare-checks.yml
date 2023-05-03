@@ -6,6 +6,6 @@ metadata:
 spec:
   builds:
   - url: https://github.com/runarsf/sensu-assets/releases/download/latest/cloudflare-checks.tar.gz
-    sha512: d0c8ea132f7242411d344b8ea405dd7de2f3e0ca2db306c4bcc06e332bf84906f3fbb47a71745016b90de39922f82c2039ee34d6d5737a7b97d515cb030f9e18
+    sha512: d8a13d39fa20ce79b95d87673d7fd48e196819a1602d283814d4b4e7a098836fb33f73dc305ac6f65a57e157bfc92cfbea775062ad654b0552b49e32648122ea
     filters:
     - entity.system.os == 'linux'
