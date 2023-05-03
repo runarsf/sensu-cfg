@@ -15,4 +15,9 @@ spec:
   interval: 900
   publish: true
   subscriptions:
-  - system
+  - entity:hsrv
+  secrets:
+  - name: CLOUDFLARE_SITE
+    secret: cloudflare-site
+  - name: CLOUDFLARE_TOKEN
+    secret: cloudflare-token
