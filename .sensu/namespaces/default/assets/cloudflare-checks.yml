@@ -1,0 +1,11 @@
+---
+type: Asset
+api_version: core/v2
+metadata:
+  name: cloudflare-checks
+spec:
+  builds:
+  - url: https://github.com/runarsf/sensu-assets/releases/download/latest/cloudflare-checks.tar.gz
+    sha512: d0c8ea132f7242411d344b8ea405dd7de2f3e0ca2db306c4bcc06e332bf84906f3fbb47a71745016b90de39922f82c2039ee34d6d5737a7b97d515cb030f9e18
+    filters:
+    - entity.system.os == 'linux'

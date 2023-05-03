@@ -1,0 +1,46 @@
+---
+type: Asset
+api_version: core/v2
+metadata:
+  name: telegram-handler
+  labels:
+  annotations:
+    io.sensu.bonsai.url: https://bonsai.sensu.io/assets/Thor77/sensu-telegram-handler
+    io.sensu.bonsai.api_url: https://bonsai.sensu.io/api/v1/assets/Thor77/sensu-telegram-handler
+    io.sensu.bonsai.tier: Community
+    io.sensu.bonsai.version: 0.2.0
+    io.sensu.bonsai.namespace: Thor77
+    io.sensu.bonsai.name: sensu-telegram-handler
+    io.sensu.bonsai.tags: handler
+spec:
+  builds:
+  - url: https://assets.bonsai.sensu.io/2f47e00cfc6277c6d0df8de0c238c123089ad7d5/sensu-telegram-handler_0.2.0_linux_amd64.tar.gz
+    sha512: 275e1ab05be5cbd413961993d5765fc9e5b9b24436f08c6b5697fdec7df6596b3fbcebad9dd612534682c831bbfb9de3a1627486e984a588d861bb1e45a5826e
+    filters:
+    - entity.system.os == 'linux'
+    - entity.system.arch == 'amd64'
+  - url: https://assets.bonsai.sensu.io/2f47e00cfc6277c6d0df8de0c238c123089ad7d5/sensu-telegram-handler_0.2.0_linux_386.tar.gz
+    sha512: 44b94dc4a3d227ada167bba49fb26d8fd0863e5a4cbd41c7fe8920ba32aa25a7f53987cae3ac91e17c3406b4a64ef5e43be9252073d7f78060c92438865ebbe0
+    filters:
+    - entity.system.os == 'linux'
+    - entity.system.arch == '386'
+  - url: https://assets.bonsai.sensu.io/2f47e00cfc6277c6d0df8de0c238c123089ad7d5/sensu-telegram-handler_0.2.0_linux_arm64.tar.gz
+    sha512: 25933b7062ce92ca9cad1685dd5e419983815df753e339bb1946620ca807838f199282ba99d479f551dd82c1759dcc5960f56fa0d70557e53fe89fb0c7a6d5ad
+    filters:
+    - entity.system.os == 'linux'
+    - entity.system.arch == 'arm64'
+  - url: https://assets.bonsai.sensu.io/2f47e00cfc6277c6d0df8de0c238c123089ad7d5/sensu-telegram-handler_0.2.0_linux_armv7.tar.gz
+    sha512: dd5b1ce278a5f6aa4fc159da282cff19d260352dee048d151d7de68866c34fd2462fda776734f13d8cebec1d3ba8a7650dda135535ca1ccc7da07ec8409869cf
+    filters:
+    - entity.system.os == 'linux'
+    - entity.system.arch == 'armv7'
+  - url: https://assets.bonsai.sensu.io/2f47e00cfc6277c6d0df8de0c238c123089ad7d5/sensu-telegram-handler_0.2.0_darwin_amd64.tar.gz
+    sha512: e297aeb8379cc5c9457aed8835d5f8ed06b257172eae6679c40b4cc3e9e3cecc70a764151279a1661cd3a29443d0b4e9861a0d4af61f63eb02e34f5ba1296ebd
+    filters:
+    - entity.system.os == 'darwin'
+    - entity.system.arch == 'amd64'
+  - url: https://assets.bonsai.sensu.io/2f47e00cfc6277c6d0df8de0c238c123089ad7d5/sensu-telegram-handler_0.2.0_windows_amd64.tar.gz
+    sha512: dbdf69cf536570acc55421b3c29fbe2952a7ba0d7c4c9d2ece7199ee8b9a95e18447646452a9a8e39c6d0202f41cd1cf50d33af5b9cf03158b7f34ad732c72e6
+    filters:
+    - entity.system.os == 'windows'
+    - entity.system.arch == 'amd64'

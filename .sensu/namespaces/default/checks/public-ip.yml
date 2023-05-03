@@ -1,3 +1,4 @@
+---
 type: CheckConfig
 api_version: core/v2
 metadata:
@@ -5,13 +6,9 @@ metadata:
   labels:
     sensu.io/workflow: sensu-flow
 spec:
-  command: |-
-    #!/usr/bin/env python
-    print("Hello World!")
+  command: cloudflare-public-ip.py '*.runarsf.dev'
   runtime_assets:
-  - sensu-python-runtime
-  env_vars:
-  - OLD_IP=88.89.158.149
+  - cloudflare-checks
   handlers:
   - telegram
   interval: 900

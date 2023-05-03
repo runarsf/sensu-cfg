@@ -1,3 +1,4 @@
+---
 type: Handler
 api_version: core/v2
 metadata:
@@ -11,7 +12,7 @@ spec:
   - is_incident
   - not_silenced
   runtime_assets:
-  - sensu-telegram-handler
+  - telegram-handler
   secrets:
   - name: TELEGRAM_API_TOKEN
     secret: telegram-api-token
