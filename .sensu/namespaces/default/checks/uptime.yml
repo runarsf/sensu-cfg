@@ -1,0 +1,13 @@
+---
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: uptime
+  labels:
+    sensu.io/workflow: sensu-flow
+spec:
+  command: uptime
+  interval: 900
+  publish: true
+  subscriptions:
+  - system
