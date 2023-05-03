@@ -8,16 +8,16 @@ metadata:
 spec:
   command: cloudflare-public-ip.py '*.runarsf.dev'
   runtime_assets:
-  - cloudflare-checks
-  - python-runtime
+    - cloudflare-checks
+    - python-runtime
   handlers:
-  - telegram
+    - telegram
   interval: 900
   publish: true
   subscriptions:
-  - entity:hsrv
+    - entity:hsrv
   secrets:
-  - name: CLOUDFLARE_SITE
-    secret: cloudflare-site
-  - name: CLOUDFLARE_TOKEN
-    secret: cloudflare-token
+    - name: CLOUDFLARE_SITE
+      secret: cloudflare-site
+    - name: CLOUDFLARE_TOKEN
+      secret: cloudflare-token

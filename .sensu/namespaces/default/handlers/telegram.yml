@@ -9,12 +9,12 @@ spec:
   command: sensu-telegram-handler --api-token "${TELEGRAM_API_TOKEN}" --chatid "${TELEGRAM_CHAT_ID}"
   type: pipe
   filters:
-  - is_incident
-  - not_silenced
+    - is_incident
+    - not_silenced
   runtime_assets:
-  - telegram-handler
+    - telegram-handler
   secrets:
-  - name: TELEGRAM_API_TOKEN
-    secret: telegram-api-token
-  - name: TELEGRAM_CHAT_ID
-    secret: telegram-chat-id
+    - name: TELEGRAM_API_TOKEN
+      secret: telegram-api-token
+    - name: TELEGRAM_CHAT_ID
+      secret: telegram-chat-id

@@ -14,41 +14,41 @@ metadata:
     io.sensu.bonsai.tags: ''
 spec:
   builds:
-  - url: https://assets.bonsai.sensu.io/5839b7ac2ee12ffc6330a09e8450197a5dbe5184/sensu-plugins-docker_4.1.6_alpine_linux_amd64.tar.gz
-    sha512: a411108776a9c558c7b1053c4f85079b4c6e2917d816ce82229471a08182cae5d63b5a12bb60c248bb28caf58429f495cefdfedddeade7b8bb95bcf142a51b2d
-    filters:
-    - entity.system.os == 'linux'
-    - entity.system.arch == 'amd64'
-    - entity.system.platform == 'alpine'
-    - entity.system.platform_version.split('.')[0] == '3'
-  - url: https://assets.bonsai.sensu.io/5839b7ac2ee12ffc6330a09e8450197a5dbe5184/sensu-plugins-docker_4.1.6_alpine3.8_linux_amd64.tar.gz
-    sha512: 4549d540376c2111296f955e99d892bd483cd389852729ab3ba37fd992fbc4b1c125ecdc2512d0dff4316972e2608b98fd93f9a90c9e0e9abaf01633420d5f80
-    filters:
-    - entity.system.os == 'linux'
-    - entity.system.arch == 'amd64'
-    - entity.system.platform == 'alpine'
-  - url: https://assets.bonsai.sensu.io/5839b7ac2ee12ffc6330a09e8450197a5dbe5184/sensu-plugins-docker_4.1.6_centos6_linux_amd64.tar.gz
-    sha512: 8ecfe8a8bbb444bd064f2ca20c5285f5a52f17010d429f73940f836cc9a94cc9ff14b7218e05ad7bc9bd6b04fed764316cd426b93c5c38822dafc5b0900fe13d
-    filters:
-    - entity.system.os == 'linux'
-    - entity.system.arch == 'amd64'
-    - entity.system.platform_family == 'rhel'
-    - entity.system.platform_version.split('.')[0] == '6'
-  - url: https://assets.bonsai.sensu.io/5839b7ac2ee12ffc6330a09e8450197a5dbe5184/sensu-plugins-docker_4.1.6_centos7_linux_amd64.tar.gz
-    sha512: 997f31d194028cb0ee0875ef9b0c2df09d0696e31c2bb3d457b98c2d41035f053984c5697c839f5ab45aab513b753b94fd461ec92e562297eba587312bcc46d5
-    filters:
-    - entity.system.os == 'linux'
-    - entity.system.arch == 'amd64'
-    - entity.system.platform_family == 'rhel'
-    - entity.system.platform_version.split('.')[0] == '7'
-  - url: https://assets.bonsai.sensu.io/5839b7ac2ee12ffc6330a09e8450197a5dbe5184/sensu-plugins-docker_4.1.6_debian_linux_amd64.tar.gz
-    sha512: 0c2faa9569a53bed0dc3f8b2863fb13123133d3c37996ddabc0c64777286dc019c314122e44137f9e6c18ad9c70f77cb36c6c1455b64d4a01c709786f03e90a9
-    filters:
-    - entity.system.os == 'linux'
-    - entity.system.arch == 'amd64'
-    - entity.system.platform_family == 'debian'
-  - url: https://assets.bonsai.sensu.io/5839b7ac2ee12ffc6330a09e8450197a5dbe5184/sensu-plugins-docker_4.1.6_debian9_linux_amd64.tar.gz
-    sha512: '0781867377a3cc24ee4502e2c2eebb6c46146d13a79a56b8cda06c2252b24a700939c8646ebaf8256a12478bbd95329b7ca581f5926ef364967376a6c4d92429'
-    filters:
-    - entity.system.os == 'linux'
-    - entity.system.arch == 'amd64'
+    - url: https://assets.bonsai.sensu.io/5839b7ac2ee12ffc6330a09e8450197a5dbe5184/sensu-plugins-docker_4.1.6_alpine_linux_amd64.tar.gz
+      sha512: a411108776a9c558c7b1053c4f85079b4c6e2917d816ce82229471a08182cae5d63b5a12bb60c248bb28caf58429f495cefdfedddeade7b8bb95bcf142a51b2d
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'amd64'
+        - entity.system.platform == 'alpine'
+        - entity.system.platform_version.split('.')[0] == '3'
+    - url: https://assets.bonsai.sensu.io/5839b7ac2ee12ffc6330a09e8450197a5dbe5184/sensu-plugins-docker_4.1.6_alpine3.8_linux_amd64.tar.gz
+      sha512: 4549d540376c2111296f955e99d892bd483cd389852729ab3ba37fd992fbc4b1c125ecdc2512d0dff4316972e2608b98fd93f9a90c9e0e9abaf01633420d5f80
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'amd64'
+        - entity.system.platform == 'alpine'
+    - url: https://assets.bonsai.sensu.io/5839b7ac2ee12ffc6330a09e8450197a5dbe5184/sensu-plugins-docker_4.1.6_centos6_linux_amd64.tar.gz
+      sha512: 8ecfe8a8bbb444bd064f2ca20c5285f5a52f17010d429f73940f836cc9a94cc9ff14b7218e05ad7bc9bd6b04fed764316cd426b93c5c38822dafc5b0900fe13d
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'amd64'
+        - entity.system.platform_family == 'rhel'
+        - entity.system.platform_version.split('.')[0] == '6'
+    - url: https://assets.bonsai.sensu.io/5839b7ac2ee12ffc6330a09e8450197a5dbe5184/sensu-plugins-docker_4.1.6_centos7_linux_amd64.tar.gz
+      sha512: 997f31d194028cb0ee0875ef9b0c2df09d0696e31c2bb3d457b98c2d41035f053984c5697c839f5ab45aab513b753b94fd461ec92e562297eba587312bcc46d5
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'amd64'
+        - entity.system.platform_family == 'rhel'
+        - entity.system.platform_version.split('.')[0] == '7'
+    - url: https://assets.bonsai.sensu.io/5839b7ac2ee12ffc6330a09e8450197a5dbe5184/sensu-plugins-docker_4.1.6_debian_linux_amd64.tar.gz
+      sha512: 0c2faa9569a53bed0dc3f8b2863fb13123133d3c37996ddabc0c64777286dc019c314122e44137f9e6c18ad9c70f77cb36c6c1455b64d4a01c709786f03e90a9
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'amd64'
+        - entity.system.platform_family == 'debian'
+    - url: https://assets.bonsai.sensu.io/5839b7ac2ee12ffc6330a09e8450197a5dbe5184/sensu-plugins-docker_4.1.6_debian9_linux_amd64.tar.gz
+      sha512: '0781867377a3cc24ee4502e2c2eebb6c46146d13a79a56b8cda06c2252b24a700939c8646ebaf8256a12478bbd95329b7ca581f5926ef364967376a6c4d92429'
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'amd64'

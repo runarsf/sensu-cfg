@@ -14,29 +14,29 @@ metadata:
     io.sensu.bonsai.tags: ''
 spec:
   builds:
-  - url: https://assets.bonsai.sensu.io/6fe0b8100cfc925506059dae718075a8e0241329/sensu-python-runtime_0.0.1_python-3.6.11_alpine_linux_amd64.tar.gz
-    sha512: 6bd12eef14880fdbd2a064461fd770866fdc7b2e3edb50faa3299ab67052a1bd2178d90e260fab3502b3e1311088b3317104b782395b3b50a475ac8c34f2b96a
-    filters:
-    - entity.system.os == 'linux'
-    - entity.system.arch == 'amd64'
-    - entity.system.platform == 'alpine'
-  - url: https://assets.bonsai.sensu.io/6fe0b8100cfc925506059dae718075a8e0241329/sensu-python-runtime_0.0.1_python-3.6.11_debian8_linux_amd64.tar.gz
-    sha512: b6957997c819b6c9fcdb641c3e40c40a9a59a554d24bc7253281a696381a37689b9ee6c1be9b56fef8a19063fa6f0590335465104479ffffeb39234f2ca115af
-    filters:
-    - entity.system.os == 'linux'
-    - entity.system.arch == 'amd64'
-    - entity.system.platform_family == 'debian'
-  - url: https://assets.bonsai.sensu.io/6fe0b8100cfc925506059dae718075a8e0241329/sensu-python-runtime_0.0.1_python-3.6.11_centos6_linux_amd64.tar.gz
-    sha512: 3325a19b59edb20444789e82879e9f9363cd375f0c9b03fe1294074373d166ce17fc52ee0758cc3c573493a1992a3e0ecefb737298549d4f523b34135ba8fb1a
-    filters:
-    - entity.system.os == 'linux'
-    - entity.system.arch == 'amd64'
-    - entity.system.platform_family == 'rhel'
-    - parseInt(entity.system.platform_version.split('.')[0]) == 6
-  - url: https://assets.bonsai.sensu.io/6fe0b8100cfc925506059dae718075a8e0241329/sensu-python-runtime_0.0.1_python-3.6.11_centos7_linux_amd64.tar.gz
-    sha512: e4e969fbb9379953497ae92f4213501c54735fdbb2d50580114dc7b553d476b5f6a37df84123ac0ba8841e15d11e32854e3ba25c9740574fc270afad66258f4f
-    filters:
-    - entity.system.os == 'linux'
-    - entity.system.arch == 'amd64'
-    - entity.system.platform_family == 'rhel'
-    - parseInt(entity.system.platform_version.split('.')[0]) >= 7
+    - url: https://assets.bonsai.sensu.io/6fe0b8100cfc925506059dae718075a8e0241329/sensu-python-runtime_0.0.1_python-3.6.11_alpine_linux_amd64.tar.gz
+      sha512: 6bd12eef14880fdbd2a064461fd770866fdc7b2e3edb50faa3299ab67052a1bd2178d90e260fab3502b3e1311088b3317104b782395b3b50a475ac8c34f2b96a
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'amd64'
+        - entity.system.platform == 'alpine'
+    - url: https://assets.bonsai.sensu.io/6fe0b8100cfc925506059dae718075a8e0241329/sensu-python-runtime_0.0.1_python-3.6.11_debian8_linux_amd64.tar.gz
+      sha512: b6957997c819b6c9fcdb641c3e40c40a9a59a554d24bc7253281a696381a37689b9ee6c1be9b56fef8a19063fa6f0590335465104479ffffeb39234f2ca115af
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'amd64'
+        - entity.system.platform_family == 'debian'
+    - url: https://assets.bonsai.sensu.io/6fe0b8100cfc925506059dae718075a8e0241329/sensu-python-runtime_0.0.1_python-3.6.11_centos6_linux_amd64.tar.gz
+      sha512: 3325a19b59edb20444789e82879e9f9363cd375f0c9b03fe1294074373d166ce17fc52ee0758cc3c573493a1992a3e0ecefb737298549d4f523b34135ba8fb1a
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'amd64'
+        - entity.system.platform_family == 'rhel'
+        - parseInt(entity.system.platform_version.split('.')[0]) == 6
+    - url: https://assets.bonsai.sensu.io/6fe0b8100cfc925506059dae718075a8e0241329/sensu-python-runtime_0.0.1_python-3.6.11_centos7_linux_amd64.tar.gz
+      sha512: e4e969fbb9379953497ae92f4213501c54735fdbb2d50580114dc7b553d476b5f6a37df84123ac0ba8841e15d11e32854e3ba25c9740574fc270afad66258f4f
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'amd64'
+        - entity.system.platform_family == 'rhel'
+        - parseInt(entity.system.platform_version.split('.')[0]) >= 7

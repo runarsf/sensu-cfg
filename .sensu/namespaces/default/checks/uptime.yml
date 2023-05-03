@@ -10,4 +10,4 @@ spec:
   interval: 900
   publish: true
   subscriptions:
-  - system
+    - system

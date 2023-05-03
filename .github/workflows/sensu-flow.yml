@@ -13,19 +13,19 @@ jobs:
   SensuFlow:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: SensuFlow
-      uses: sensu/sensu-flow@0.7.0
-      # https://github.com/sensu/sensu-flow#configuration
-      with:
-        sensu_api_url: ${{ secrets.SENSU_API_URL }}
-        sensu_api_key: ${{ secrets.SENSU_API_KEY }}
+      - name: SensuFlow
+        uses: sensu/sensu-flow@0.7.0
+        # https://github.com/sensu/sensu-flow#configuration
+        with:
+          sensu_api_url: ${{ secrets.SENSU_API_URL }}
+          sensu_api_key: ${{ secrets.SENSU_API_KEY }}
 
-        namespaces_dir: .sensu/namespaces
-        namespaces_file: .sensu/cluster/namespaces.yaml
-        matching_label: "sensu.io/workflow"
-        matching_condition: "== 'sensu-flow'"
+          namespaces_dir: .sensu/namespaces
+          namespaces_file: .sensu/cluster/namespaces.yaml
+          matching_label: "sensu.io/workflow"
+          matching_condition: "== 'sensu-flow'"
 
-        resource_authors: "sensu-flow"
+          resource_authors: "sensu-flow"
