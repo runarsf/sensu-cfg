@@ -11,6 +11,7 @@ spec:
   filters:
     - is_incident
     - not_silenced
+    - fatigue_check
   runtime_assets:
     - telegram-handler
   secrets:
