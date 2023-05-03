@@ -1,0 +1,27 @@
+---
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: containers
+  labels:
+    sensu.io/workflow: sensu-flow
+spec:
+  command: |-
+    read -r -d '' CONTAINERS <<'EOF'
+      cloudflare-ddns
+      xbackbone
+      xbackbone-db
+    EOF
+
+    while IFS= read -r container || test -n "${container}" ; do
+      check-container.rb -N "${container}"
+    done < <(printf '%s' "$CONTAINERS")
+  handlers:
+    - telegram
+  interval: 900
+  publish: true
+  runtime_assets:
+    - docker-checks
+    - ruby-runtime
+  subscriptions:
+    - entity:hsrv
