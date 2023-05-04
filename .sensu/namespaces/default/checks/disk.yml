@@ -14,5 +14,6 @@ spec:
   runtime_assets:
     - disk-checks
     - ruby-runtime
+    - python-runtime
   subscriptions:
     - system
