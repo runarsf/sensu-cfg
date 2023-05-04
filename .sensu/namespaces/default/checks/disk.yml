@@ -1,0 +1,18 @@
+---
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: disk
+  labels:
+    sensu.io/workflow: sensu-flow
+spec:
+  command: "check-disk-usage.rb -x debugfs,tracefs -w 87 -c 97"
+  handlers:
+    - telegram
+  interval: 300
+  publish: true
+  runtime_assets:
+    - disk-checks
+    - ruby-runtime
+  subscriptions:
+    - system
