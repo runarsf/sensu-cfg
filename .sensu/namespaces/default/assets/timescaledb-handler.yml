@@ -1,0 +1,25 @@
+---
+type: Asset
+api_version: core/v2
+metadata:
+  name: timescaledb-handler
+  annotations:
+    io.sensu.bonsai.url: https://bonsai.sensu.io/assets/sensu/sensu-timescaledb-handler
+    io.sensu.bonsai.api_url: https://bonsai.sensu.io/api/v1/assets/sensu/sensu-timescaledb-handler
+    io.sensu.bonsai.tier: Community
+    io.sensu.bonsai.version: 0.5.0
+    io.sensu.bonsai.namespace: sensu
+    io.sensu.bonsai.name: sensu-timescaledb-handler
+    io.sensu.bonsai.tags: ''
+spec:
+  builds:
+    - url: https://assets.bonsai.sensu.io/d9f1a59dae64fd188e0715123071ced35702f8fd/sensu-timescaledb-handler_0.5.0_linux_amd64.tar.gz
+      sha512: 96d1788e22c8125b14e90b2a78dda91a721246aa2d66381d18a9ee5ca5279215d1d52d3024f03cb07b2d3a1302936c99d032e6ef196ce60f5c4b3973f5ad965a
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'amd64'
+    - url: https://assets.bonsai.sensu.io/d9f1a59dae64fd188e0715123071ced35702f8fd/sensu-timescaledb-handler_0.5.0_linux_arm64.tar.gz
+      sha512: d7bc0171feceaf4ca867a11c7ba7f7c835e0c5c152e78d20ab1aede2ef48deaa5343ee59ce463badd420f738cb63b3a453629f3cd80a19b5b03f7b8b497c6ae4
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'arm64'

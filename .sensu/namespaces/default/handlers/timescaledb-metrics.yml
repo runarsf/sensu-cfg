@@ -1,0 +1,14 @@
+---
+type: Handler
+api_version: core/v2
+metadata:
+  name: timescaledb-metrics
+spec:
+  command: sensu-timescaledb-handler --table "metrics" --sslmode "disable"
+  type: pipe
+  timeout: 10
+  runtime_assets:
+    - timescaledb-handler
+  secrets:
+    - name: TIMESCALEDB_DSN
+      secret: timescaledb-uri
