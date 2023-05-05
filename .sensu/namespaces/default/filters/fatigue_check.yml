@@ -3,7 +3,6 @@ type: EventFilter
 api_version: core/v2
 metadata:
   name: fatigue_check
-  namespace: default
 spec:
   action: allow
   expressions:
