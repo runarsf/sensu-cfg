@@ -21,3 +21,7 @@ spec:
       secret: cloudflare-site
     - name: CLOUDFLARE_TOKEN
       secret: cloudflare-token
+  pipelines:
+    - api_version: core/v2
+      type: Pipeline
+      name: timescaledb-metrics

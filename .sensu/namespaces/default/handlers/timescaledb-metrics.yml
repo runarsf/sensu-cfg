@@ -3,6 +3,8 @@ type: Handler
 api_version: core/v2
 metadata:
   name: timescaledb-metrics
+  labels:
+    sensu.io/workflow: sensu-flow
 spec:
   command: sensu-timescaledb-handler --table "metrics" --sslmode "disable"
   type: pipe
