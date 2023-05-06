@@ -1,0 +1,17 @@
+---
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: cluster-metrics
+spec:
+  command: sensu-cluster-metrics --output-format "influxdb_line"
+  subscriptions:
+    - sensu-metrics
+  runtime_assets:
+    - cluster-metrics
+  output_metric_format: opentsdb_line
+  output_metric_handlers:
+    - timeseriesdb-metrics
+  secrets:
+    - name: CLUSTER_API_KEY
+      secret: cluster-apikey

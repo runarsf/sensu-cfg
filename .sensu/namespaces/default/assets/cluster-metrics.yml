@@ -1,0 +1,46 @@
+---
+type: Asset
+api_version: core/v2
+metadata:
+  name: cluster-metrics
+  labels:
+  annotations:
+    io.sensu.bonsai.url: https://bonsai.sensu.io/assets/sensu/sensu-cluster-metrics
+    io.sensu.bonsai.api_url: https://bonsai.sensu.io/api/v1/assets/sensu/sensu-cluster-metrics
+    io.sensu.bonsai.tier: Community
+    io.sensu.bonsai.version: 0.0.2
+    io.sensu.bonsai.namespace: sensu
+    io.sensu.bonsai.name: sensu-cluster-metrics
+    io.sensu.bonsai.tags: ''
+spec:
+  builds:
+    - url: https://assets.bonsai.sensu.io/564180ea7945d30aaa8b2e51b833a8ea24c2e68b/sensu-cluster-metrics_0.0.2_linux_amd64.tar.gz
+      sha512: 7c55b24870858d02b7245859ef27397d41ca24de8fce84708a4bf71cf285c340e5ff4d40eac8a6c7ef00a294e96c745218442334d0f41e2a192536dd59440874
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'amd64'
+    - url: https://assets.bonsai.sensu.io/564180ea7945d30aaa8b2e51b833a8ea24c2e68b/sensu-cluster-metrics_0.0.2_linux_386.tar.gz
+      sha512: 18e8c14bd304c9e3b7cd70747e251b43ee34a58ed12952e1fd462ee9ace9a379bec7ad189c8ec7654963e394d3022c30c493c14a3c6dee12d09b7abe4275a633
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == '386'
+    - url: https://assets.bonsai.sensu.io/564180ea7945d30aaa8b2e51b833a8ea24c2e68b/sensu-cluster-metrics_0.0.2_linux_arm64.tar.gz
+      sha512: 2f17619dd172a86425479f172c0543b3452148370d6bf99b51d7456d75cd6d8ca1536b2cee53672177404e3837ca4ade47bae88b5cbe679d414d355fc3bc96e9
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'arm64'
+    - url: https://assets.bonsai.sensu.io/564180ea7945d30aaa8b2e51b833a8ea24c2e68b/sensu-cluster-metrics_0.0.2_linux_armv7.tar.gz
+      sha512: 70896493d31a292ee7784c745703a9b7abacabe5697fb59f89f166741b673c6278e4326408a9618d3535e1ed0698c5ea9ff399167a5ea92afe5d0979769cc9ff
+      filters:
+        - entity.system.os == 'linux'
+        - entity.system.arch == 'armv7'
+    - url: https://assets.bonsai.sensu.io/564180ea7945d30aaa8b2e51b833a8ea24c2e68b/sensu-cluster-metrics_0.0.2_darwin_amd64.tar.gz
+      sha512: a20af933f9685ab5b013320c2f7ad73ebdfa73937d1b2b89cfac4585792f6a57734e9c1c50666579fe15f72505d27d022c63384eb87bd39f8b3f99d9481d1216
+      filters:
+        - entity.system.os == 'darwin'
+        - entity.system.arch == 'amd64'
+    - url: https://assets.bonsai.sensu.io/564180ea7945d30aaa8b2e51b833a8ea24c2e68b/sensu-cluster-metrics_0.0.2_windows_amd64.tar.gz
+      sha512: 78a96b7dabf973a665f00b618fcb7b7850ea545014dfe66293e0cd88177d161aed30f02312d7731e9889425713362805b56dd4f0a062020944bce101e0730f7b
+      filters:
+        - entity.system.os == 'windows'
+        - entity.system.arch == 'amd64'
