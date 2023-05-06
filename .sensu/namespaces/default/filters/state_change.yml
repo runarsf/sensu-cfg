@@ -2,7 +2,7 @@
 type: EventFilter
 api_version: core/v2
 metadata:
-  name: hourly
+  name: state_change
 spec:
   action: allow
   expressions:
