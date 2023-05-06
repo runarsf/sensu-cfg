@@ -17,7 +17,3 @@ spec:
     - python-runtime
   subscriptions:
     - system
-  pipelines:
-    - api_version: core/v2
-      type: Pipeline
-      name: timescaledb-metrics

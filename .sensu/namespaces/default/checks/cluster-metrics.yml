@@ -3,8 +3,12 @@ type: CheckConfig
 api_version: core/v2
 metadata:
   name: cluster-metrics
+  labels:
+    sensu.io/workflow: sensu-flow
 spec:
   command: sensu-cluster-metrics --output-format "influxdb_line"
+  interval: 300
+  publish: true
   subscriptions:
     - sensu-metrics
   runtime_assets:

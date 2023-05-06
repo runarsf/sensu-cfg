@@ -25,7 +25,3 @@ spec:
     - ruby-runtime
   subscriptions:
     - entity:hsrv
-  pipelines:
-    - api_version: core/v2
-      type: Pipeline
-      name: timescaledb-metrics
