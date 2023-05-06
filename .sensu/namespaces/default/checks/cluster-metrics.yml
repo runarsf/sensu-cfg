@@ -6,7 +6,11 @@ metadata:
   labels:
     sensu.io/workflow: sensu-flow
 spec:
-  command: sensu-cluster-metrics --output-format "influxdb_line"
+  command: >-
+    sensu-cluster-metrics
+    --url "http://sensu-backend:8080/graphql"
+    --api-key "${CLUSTER_API_KEY}"
+    --output-format "influxdb_line"
   interval: 300
   publish: true
   subscriptions:
@@ -15,7 +19,7 @@ spec:
     - cluster-metrics
   output_metric_format: opentsdb_line
   output_metric_handlers:
-    - timeseriesdb-metrics
+    - timescaledb-metrics
   secrets:
     - name: CLUSTER_API_KEY
       secret: cluster-apikey
