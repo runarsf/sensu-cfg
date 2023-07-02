@@ -13,7 +13,7 @@ spec:
   handlers:
     - telegram
   interval: 900
-  publish: true
+  publish: false
   subscriptions:
     - entity:hsrv
   secrets:
